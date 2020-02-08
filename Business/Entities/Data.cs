@@ -1,4 +1,4 @@
-﻿namespace Business
+﻿namespace Business.Entities
 {
     public class Data
     {

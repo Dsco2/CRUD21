@@ -1,14 +1,15 @@
-﻿using System;
-using Business;
+﻿using Business.Entities;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Maps;
+
 
 namespace Persistence
 {
     public class PrincipalContext : DbContext
     {
-        private DbSet<Data> Data { get; set; }
-        public PrincipalContext(DbContextOptions<PrincipalContext> options) : base(options){}
+        public DbSet<Data> Data { get; set; }
+
+        public PrincipalContext(DbContextOptions<PrincipalContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
